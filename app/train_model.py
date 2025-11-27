@@ -18,8 +18,9 @@ try:
 except ImportError:
     from app.preprocessing import preprocess_bosnian_text
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
-DATASET_PATH = os.path.join(BASE_DIR, "dataset", "bosnian_fake_news_dataset.csv")
+# Dataset is now in backend/dataset/ folder
+BACKEND_DIR = os.path.dirname(os.path.dirname(__file__))
+DATASET_PATH = os.path.join(BACKEND_DIR, "dataset", "bosnian_fake_news_dataset.csv")
 MODEL_DIR = os.path.join(os.path.dirname(__file__), "models")
 METRICS_DIR = os.path.join(os.path.dirname(__file__), "metrics")
 os.makedirs(MODEL_DIR, exist_ok=True)

@@ -34,8 +34,9 @@ app.add_middleware(
 
 MODEL_DIR = os.path.join(os.path.dirname(__file__), "models")
 METRICS_DIR = os.path.join(os.path.dirname(__file__), "metrics")
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
-DATASET_PATH = os.path.join(BASE_DIR, "dataset", "bosnian_fake_news_dataset.csv")
+# Dataset is now in backend/dataset/ folder
+BACKEND_DIR = os.path.dirname(os.path.dirname(__file__))
+DATASET_PATH = os.path.join(BACKEND_DIR, "dataset", "bosnian_fake_news_dataset.csv")
 
 VECTORIZER_PATH = os.path.join(MODEL_DIR, "tfidf_vectorizer.joblib")
 MODEL_PATH = os.path.join(MODEL_DIR, "classifier.joblib")
